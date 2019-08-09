@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-packageName="com.wholerengroup.client" id="com.wholerengroup.client" ios-CFBundleIdentifier="com.wholerengroup.client.apple" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>厚仁留学</name>
+    <description>
+        Wholeren Liuxue App 厚仁留学App
+    </description>
+    <author email="wholerencom@gmail.com" href="https://wholeren.com">
+        Wholeren IT Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+
+
+    <preference name="StatusBarBackgroundColor" value="#ffffff" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarStyle" value="default" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="WebViewBounce" value="false" />
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
+    <preference name="KeyboardShrinksView" value="false" />
+    <preference name="fullscreen" value="false" />
+    <preference name="orientation" value="portrait" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <!-- 设备 -->
+    <plugin name="cordova-plugin-device" spec="^2.0.2" />
+    <!-- 相机 -->
+    <plugin name="cordova-plugin-camera" spec="^4.0.3">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value="是否允许 厚仁 App 使用相机功能？" />
+        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="是否允许 厚仁 App 打开相册？" />
+    </plugin>
+    <!-- 本地相册 -->
+    <plugin name="cordova-plugin-image-picker" spec="~1.1.1">
+        <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value=" " />
+    </plugin>
+    <!-- cordova的webview插件 -->
+    <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
+    <!-- 打开文件 -->
+    <plugin name="cordova-plugin-file-opener2" spec="~2.0.19" />
+    <!-- 状态栏 -->
+     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
+     <!-- 小图标和启动动画 -->
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <!-- 下载 -->
+    <plugin name="cordova-plugin-file-transfer" spec="~1.7.1" />
+   <!-- 打开安卓权限 -->
+    <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
+    <!-- 网络环境 -->
+    <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
+    <!-- 版本更新 -->
+    <plugin name="cordova-plugin-app-update" spec="^2.0.2" >
+        <uses-permission android:name="com.wholerengroup.client.permission.REQUEST_INSTALL_PACKAGES"/>
+    </plugin>
+    
+    
+</widget>
